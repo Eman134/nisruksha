@@ -699,3 +699,11 @@ a.theme-link:hover{
         padding-top:0.5rem
     }
 }
+
+@media (max-width:480px) {
+    .logo-text {display:none}
+}
+
+@media (max-width:345px) {
+    .logo-icon {display:none}
+}
