@@ -118,11 +118,11 @@
 					<section class="docs-section" id="item-1-2">
 						<h2 class="section-heading">Lista</h2>
 
-						<button type="button" class="btn btn-dark btn-sm showorhide"><i class="fas fa-eye-slash"></i> Mostrar/Ocultar</button>
+						<button type="button" class="btn btn-dark btn-sm showorhide"><i class="xee fas fa-eye"></i> <e class="xee2">Mostrar</e></button>
 						<br>
 						<br>
 
-						<div class="page-content listmachines">
+						<div class="page-content listmachines" style="display: none">
 							<div class="container" style="background-color: #DFDFDF;">
 								<div class="docs-overview py-5">
 									<div class="row justify-content-left">
@@ -431,12 +431,14 @@
 		$(".showorhide").click(function() {
 			//remova esta linha --> $(".homeMenuFilhos").css('display','none');
 			if($(this).parent().find(".listmachines").css('display') == 'none'){
-				$(this).parent().find(".listmachines").show();
-				document.getElementByClass("showorhide").innerHTML = '<button type="button" class="btn btn-dark btn-sm showorhide"><i class="fas fa-eye-slash"></i> Mostrar/Ocultar</button>'
+				$(this).parent().find(".listmachines").show(500);
+				$(this).parent().find(".xee").replaceWith('<i class="xee fas fa-eye-slash"></i>')
+				$(this).parent().find(".xee2").replaceWith('<e class="xee2">Ocultar</e>')
 			}
 			else{
-				$(this).parent().find(".listmachines").hide();
-				document.getElementByClass("showorhide").innerHTML = '<button type="button" class="btn btn-dark btn-sm showorhide"><i class="fas fa-eye"></i> Mostrar/Ocultar</button>'
+				$(this).parent().find(".listmachines").hide(500);
+				$(this).parent().find(".xee").replaceWith('<i class="xee fas fa-eye"></i>')
+				$(this).parent().find(".xee2").replaceWith('<e class="xee2">Mostrar</e>')
 			}    
 		
 		});
