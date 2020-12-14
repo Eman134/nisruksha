@@ -93,8 +93,8 @@
 				    <section class="docs-section" id="item-1-1">
 						<h2 class="section-heading">Máquina</h2>
 						<p>Utilizando o comando <x class="md-bg">[prefixo]máquina</x> você pode visualizar todas as informações da sua máquina...Mas, como consigo uma?
-						<br>Na verdade, todas as pessoas que começam no bot ja possui uma máquina, a <strong>Máquina Inicial</strong>, então todas as pessoas conseguem usar o comando de máquina.
-						<br>(Mas e como consigo outra máquina?) Para conseguir as próximas máquinas, você deve comprar na loja, para saber detalhadamente visualize a seção <a style="color:#82319b"><span class="theme-icon-holder mr-2"><i class="fas fa-store-alt"></i></span>Loja</a> da aba <strong>Economia</strong><br>Dica: Volte para a página inicial, clique em Economia e procure pela categoria Loja para encontrar a informação.</p>
+						<br>Na verdade, todas as pessoas que começam no bot ja possui uma máquina, a <strong>Máquina Inicial</strong> (<a style="color:#82319b"><i class="fas fa-plug"></i> Lista</a>), então todas as pessoas conseguem usar o comando de máquina.
+						<br>(Mas e como consigo outra máquina?) Para conseguir as próximas máquinas, você deve comprar na loja, para saber detalhadamente visualize a seção <a style="color:#82319b"><i class="fas fa-store-alt"></i> Loja</a> da aba <strong>Economia</strong><br>Dica: Volte para a página inicial, clique em Economia e procure pela categoria Loja para encontrar a informação.</p>
 						
                         <div class="callout-block callout-block-info">
                             
@@ -123,7 +123,7 @@
 						
 
 						<div class="page-content">
-							<div class="container">
+							<div class="container" style="background-color: #DFDFDF;">
 								<div class="docs-overview py-5">
 									<div class="row justify-content-left">
 										<div class="col-12 col-lg-4 py-3">
@@ -146,14 +146,7 @@
 												</div>
 											</div>
 										</div>
-										<div class="col-12 col-lg-4 py-3">
-											<div class="card shadow-sm">
-												<div class="card-body">
-													<img src="https://top.gg/api/widget/763815343507505183.svg"></img>
-												</div>
-												<a class="card-link-mask" href="https://top.gg/bot/763815343507505183"></a>
-											</div>
-										</div>
+										<img src="https://top.gg/api/widget/763815343507505183.svg" href="https://top.gg/bot/763815343507505183">
 									</div>
 								</div>
 							</div>
@@ -181,11 +174,17 @@
 					
 					<section class="docs-section" id="item-1-5">
 						<h2 class="section-heading">Durabilidade</h2>
-						<p>A durabilidade é contabilizada por unidades, e cada máquina possui sua durabilidade e o gasto da mesma na mineração. </p>
+						<p>A durabilidade é contabilizada por unidades, e cada máquina possui sua durabilidade que foi definida por padrão e o gasto da mesma na <a style="color:#82319b"><i class="fas fa-snowplow"></i> Mineração</a>. O gasto é realizado a cada update de mineração, ou seja, a cada 20 segundos na mensagem de mineração.
+						<br>Para saber o gasto de unidades de cada máquina por mineração, basta realizar o cálculo de base que fizemos para este sistema:
+						<br>Cálculo do gasto: <x class="md-bg">random(1, 15) * (Tier+1)</x>
+						<br>
+						<br>Caso queira testar de forma automática, insira abaixo um número de <a style="color:#82319b"><i class="fas fa-plug"></i> Tier</a> de máquina para saber um gasto médio.
+						<br>&nbsp;&nbsp;<input type="text" size="20" id="numCalcDurability" placeholder="Insira aqui o Tier da máquina">&nbsp;&nbsp;<button onclick="calcDurability(this)">Calcular</button>
+						</p>
 					</section><!--//section-->
 
 					
-					<section class="docs-section" id="item-1-5">
+					<section class="docs-section" id="item-1-6">
 						<h2 class="section-heading">Section Item 1.4</h2>
 						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
 						
@@ -205,11 +204,11 @@
 						
 					</section><!--//section-->
 
-					<section class="docs-section" id="item-1-6">
+					<section class="docs-section" id="item-1-7">
 						<h2 class="section-heading">Section Item 1.5</h2>
 						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
 					</section><!--//section-->
-					<section class="docs-section" id="item-1-7">
+					<section class="docs-section" id="item-1-8">
 						<h2 class="section-heading">Section Item 1.6</h2>
 						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
 					</section><!--//section-->
@@ -242,7 +241,25 @@
 			    </article><!--//docs-article-->
 		    </div> 
 	    </div>
-    </div><!--//docs-wrapper-->
+	</div><!--//docs-wrapper-->
+	
+	<script>
+
+function calcDurability(e){
+   
+   var operacao = e.value;
+   
+   var n1=parseFloat(document.getElementById("numCalcDurability").value);
+   
+   var calculo = eval(n1+operacao+n2);
+
+   if(!isNaN(calculo)){
+      alert(calculo);
+   }
+  
+}
+
+	</script>
     
    
        
