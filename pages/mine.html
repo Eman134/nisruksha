@@ -179,7 +179,11 @@
 						<br>Cálculo do gasto: <x class="md-bg">random(1, 15) * (Tier+1)</x>
 						<br>
 						<br>Caso queira testar de forma automática, insira abaixo um número de <a style="color:#82319b"><i class="fas fa-plug"></i> Tier</a> de máquina para saber um gasto médio.
-						<br>&nbsp;&nbsp;<input type="text" size="20" id="numCalcDurability" placeholder="Insira aqui o Tier da máquina">&nbsp;&nbsp;<button onclick="calcDurability(this)">Calcular</button>
+						<div>
+							<br>
+							&nbsp;&nbsp;<input type="text" size="30" id="numCalcDurability" placeholder="Insira aqui o Tier da máquina">&nbsp;&nbsp;
+							<button onclick="calcDurability(this)">Calcular</button>
+						</div>
 						</p>
 					</section><!--//section-->
 
@@ -247,16 +251,22 @@
 
 function calcDurability(e){
    
-   var operacao = e.value;
-   
-   var n1=parseFloat(document.getElementById("numCalcDurability").value);
-   
-   var calculo = eval(n1+operacao+n2);
+   var tier=parseFloat(document.getElementById("numCalcDurability").value);
+   var rd = random(1, 15)
+   var calculo = rd * (tier+1);;
+
+   console.log(calculo)
+   console.log(rd)
+   console.log(tier)
 
    if(!isNaN(calculo)){
       alert(calculo);
    }
   
+}
+
+function random(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
 }
 
 	</script>
