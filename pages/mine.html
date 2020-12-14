@@ -17,9 +17,6 @@
     
     <!-- FontAwesome JS-->
     <script defer src="../assets/fontawesome/js/all.min.js"></script>
-    
-    <!-- Plugins CSS -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
 
     <!-- Theme CSS -->  
 	<link id="theme-style" rel="stylesheet" href="../assets/css/theme.css">
@@ -190,7 +187,7 @@
 								<div class="modal-dialog modal-dialog-centered" role="document">
 								  <div class="modal-content">
 									<div class="modal-header">
-									  <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+									  <h5 class="modal-title" id="exampleModalLongTitle">Cálculo de Durabilidade</h5>
 									  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 										<span aria-hidden="true">&times;</span>
 									  </button>
@@ -198,9 +195,16 @@
 									<div class="modal-body">
 										Insira abaixo um número de <a style="color:#82319b"><i class="fas fa-plug"></i> Tier</a> de máquina para saber um gasto médio.
 										<br>
-										&nbsp;&nbsp;<input type="text" size="30" id="numCalcDurability" placeholder="Insira aqui o Tier da máquina">&nbsp;&nbsp;
-										<button onclick="calcDurability(this)">Calcular</button>
-										&nbsp;&nbsp;<br>Resultado: <ai id="resultCalcDurability">...</ai>
+										<br>
+
+										<div class="input-group mb-3">
+											<input type="text" class="form-control" id="numCalcDurability" placeholder="Insira aqui o Tier da máquina" aria-label="Insira aqui o Tier da máquina" aria-describedby="basic-addon2">
+											<div class="input-group-append">
+											<button type="button" class="btn btn-success btn-sm" onclick="calcDurability(this)">Calcular</button>
+											</div>
+										</div>
+										<br>&nbsp;&nbsp;Resultado: <ai id="resultCalcDurability">...</ai>
+										<br>&nbsp;&nbsp;Mínimo-Máximo: <ai id="maxMinCalcDurability">...</ai>
 									</div>
 									<div class="modal-footer">
 									  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
@@ -280,18 +284,16 @@ function calcDurability(e){
    
    var tier=parseFloat(document.getElementById("numCalcDurability").value);
    var rd = random(1, 15)
-   var calculo = rd * (tier+1);;
-
-   console.log(calculo)
-   console.log(rd)
-   console.log(tier)
+   var calculo = rd * (tier+1);
 
    if(!isNaN(calculo)){
 
-	document.getElementById("resultCalcDurability").innerHTML = calculo;
+	document.getElementById("resultCalcDurability").innerHTML = calculo + 'u';
+	document.getElementById("maxMinCalcDurability").innerHTML = 1 * (tier+1) + '-' + 15 * (tier+1) + 'u';
 
    } else {
-	document.getElementById("resultCalcDurability").innerHTML = 'Valor inexistente';
+	document.getElementById("resultCalcDurability").innerHTML = '...';
+	document.getElementById("maxMinCalcDurability").innerHTML = '...';
    }
   
 }
