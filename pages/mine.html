@@ -76,7 +76,7 @@
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-4">Tier</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-5">Durabilidade</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-6">Energia</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-7">Placas</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-7">Chipes</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-8">Armazém</a></li>
 				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span class="theme-icon-holder mr-2"><i class="fas fa-snowplow"></i></span>Mineração</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-1">Minerar</a></li>
@@ -127,7 +127,7 @@
 						<p>Você pode visualizar a profundidade da sua máquina usando <x class="md-bg">[prefixo]máquina</x> (Veja mais em <a style="color:#82319b"><i class="fas fa-plug"></i> Máquina</a>)<br>
 						Basicamente a <strong>Profundidade</strong> influencia diretamente na quantidade de minérios gerados na <a style="color:#82319b"><i class="fas fa-snowplow"></i> Mineração</a>, então quanto maior for a profundidade, mais minérios são gerados.<br>
 						Cada máquina possui uma profundidade padrão, e quanto melhor for a sua máquina, maior a profundiade.<br>
-						Você pode aumentar a profundidade da sua máquina "artificialmente" colocando <a style="color:#82319b"><i class="fas fa-plug"></i> Placas</a></p>
+						Você pode aumentar a profundidade da sua máquina "artificialmente" colocando <a style="color:#82319b"><i class="fas fa-plug"></i> chipes</a></p>
 						
 					</section>
 					
@@ -142,6 +142,8 @@
 					<section class="docs-section" id="item-1-5">
 						<h2 class="section-heading">Durabilidade</h2>
 						<p>A durabilidade é contabilizada por unidades, e cada máquina possui sua durabilidade que foi definida por padrão e o gasto da mesma na <a style="color:#82319b"><i class="fas fa-snowplow"></i> Mineração</a>. O gasto é realizado a cada update de mineração, ou seja, a cada 20 segundos na mensagem de mineração.
+						<br>Você pode diminuir o gasto de durabilidade usando um chipe anti-desgastante (<a style="color:#82319b"><i class="fas fa-plug"></i> Chipes</a>)
+						<br>
 						<br>Para saber o gasto de unidades de cada máquina por mineração, basta realizar o cálculo de base que fizemos para este sistema:
 						<br>Cálculo do gasto: <x class="md-bg">random(1, 15) * (Tier+1)</x>
 						<br>
@@ -198,7 +200,7 @@
 					</section><!--//section-->
 
 					<section class="docs-section" id="item-1-7">
-						<h2 class="section-heading">Placas</h2>
+						<h2 class="section-heading">chipes</h2>
 						<div class="callout-block callout-block-info">
                             
                             <div class="content">
@@ -211,14 +213,14 @@
 
                             </div>
                         </div>
-						<p>Executando o comando <x class="md-bg">[prefixo]máquina</x> (Veja mais em <a style="color:#82319b"><i class="fas fa-plug"></i> Máquina</a>), você pode encontrar uma seção que detalha sobre as placas na sua máquina.
-						<br>Primeiramente, você pode visualizar o número de placas máxima e placas equipadas, que na imagem está [2/2], ou seja, o primeiro número representa o número de placas equipadas e o segundo representa o máximo
-						<br>Logo no final da imagem você pode visualizar uma dica, ela fala que a cada 6 níveis você adquire 1 slot, ou seja, para ter 2 placas, você precisa estar nível 12.
+						<p>Executando o comando <x class="md-bg">[prefixo]máquina</x> (Veja mais em <a style="color:#82319b"><i class="fas fa-plug"></i> Máquina</a>), você pode encontrar uma seção que detalha sobre os chipes na sua máquina.
+						<br>Primeiramente, você pode visualizar o número de chipes máxima e chipes equipadas, que na imagem está [2/2], ou seja, o primeiro número representa o número de chipes equipadas e o segundo representa o máximo
+						<br>Logo no final da imagem você pode visualizar uma dica, ela fala que a cada 6 níveis você adquire 1 slot, ou seja, para ter 2 chipes, você precisa estar nível 12.
 						<br>
 						<br>
 						<strong>[prefixo]equipar</strong>
 						<br>
-						Após ter seu primeiro SLOT de placa liberado (a partir do nível 6), você já tem o direito de equipar uma placa, mas...Qual placa? você precisa comprar uma placa antes para equipá-la, e você pode encontrar elas usando <x class="md-bg">[prefixo]loja placas</x>, após a compra, a placa
+						Após ter seu primeiro SLOT de chipe liberado (a partir do nível 6), você já tem o direito de equipar um chipe, mas...Qual chipe? você precisa comprar umo chipe antes para equipá-la, e você pode encontrar eles usando <x class="md-bg">[prefixo]lojo chipes</x>, após a compra, o chipe
 						irá direto para a sua mochila (<x class="md-bg">[prefixo]mochila</x>).
 						<div class="callout-block callout-block-info">
                             
@@ -231,12 +233,12 @@
 								<img src="../assets/ref/machines/machine/placa-mochila.png" width="376.5" height="293.25">
                             </div>
                         </div>
-						<br>Com a placa na mochila, você pode conseguir visualizar a quantidade, o ID da placa e um comando para ajuda.
-						<br>Agora basta executar <x class="md-bg">[prefixo]equipar <ID></x> (Verifique antes se há SLOTS disponíveis em <x class="md-bg">[prefixo]máquina</x>) e a sua placa será equipada e pronta para uso!</p>
+						<br>Com o chipe na mochila, você pode conseguir visualizar a quantidade, o ID do chipe e um comando para ajuda.
+						<br>Agora basta executar <x class="md-bg">[prefixo]equipar <ID></x> (Verifique antes se há SLOTS disponíveis em <x class="md-bg">[prefixo]máquina</x>) e o seu chipe será equipado e pronto para uso!</p>
 						<br>
 						<strong>[prefixo]desequipar</strong>
 						<br>
-						Após já haver placas equipadas na sua máquina, você pode desequipá-las utilizando o comando.
+						Após já haver chipes equipadas na sua máquina, você pode desequipá-las utilizando o comando.
 						<div class="callout-block callout-block-info">
                             
                             <div class="content">
@@ -248,8 +250,8 @@
 								<img src="../assets/ref/machines/machine/img3.png">
                             </div>
                         </div>
-						<br>Com a placa na equipada, usando o comando <x class="md-bg">[prefixo]máquina</x> você pode visualizar os SLOTS e as PLACAS, e para desequipar basta usar <x class="md-bg">[prefixo]desequipar</x>
-						<br>Após desequipar uma placa, um SLOT da sua máquina é desocupado e a placa irá direto para a sua mochila (<x class="md-bg">[prefixo]mochila</x>).
+						<br>Com o chipe na equipada, usando o comando <x class="md-bg">[prefixo]máquina</x> você pode visualizar os SLOTS e os CHIPES, e para desequipar basta usar <x class="md-bg">[prefixo]desequipar</x>
+						<br>Após desequipar umo chipe, um SLOT da sua máquina é desocupado e o chipe irá direto para a sua mochila (<x class="md-bg">[prefixo]mochila</x>).
 						<br></p>
 
 					</section><!--//section-->
@@ -283,12 +285,44 @@
 				    <header class="docs-header">
 					    <h1 class="docs-heading">Mineração</h1>
 					    <section class="docs-intro">
-						    <p>EM BREVE</p>
+						    
+						<p>
+							A mineração no geral é a base da economia de todo o bot, e é a principal fonte de renda dos jogadores.
+							<br>
+							Este sistema é em maior parte IDLE, ou seja, você só precisa digitar o comando e o bot irá fazer todo o resto durante algum tempo.
+							<br>
+						</p>
+
+
 						</section>
 				    </header>
 				     <section class="docs-section" id="item-2-1">
 						<h2 class="section-heading">Minerar</h2>
-						<p>EM BREVE.</p>
+						
+						<p>Utilizando o comando <x class="md-bg">[prefixo]minerar</x>, desde que tenha <a style="color:#82319b"><i class="fas fa-plug"></i> Energia</a> disponível, você pode iniciar a coleta de recursos
+						<br>minerais usando a sua máquina. De acordo com a <a style="color:#82319b"><i class="fas fa-plug"></i> Máquina</a> você pode coletar minérios diferentes.
+						<br>Para a mineração é necessário um mínimo de 15% da sua energia máxima, e a cada UPDATE (Por padrão a cada 20 segundos minerando) de mineração gasta 1 de energia.</p>
+						
+                        <div class="callout-block callout-block-info">
+                            
+                            <div class="content">
+                                <h4 class="callout-title">
+	                                <span class="callout-icon-holder mr-1">
+		                                <i class="fas fa-info-circle"></i>
+		                            </span><!--//icon-holder-->
+	                            </h4>
+								<img src="../assets/ref/mine/mine-img.png" width="35%" height="35%">
+								<br>
+								<br>
+								<ol>
+									<li>&nbsp;&nbsp;Informações do armazém, para visualizar a coleta em peso de minérios e também a capacidade total do armazém.</li>
+									<li>&nbsp;&nbsp;Nas informações da máquina pode visualizar os <a style="color:#82319b"><i class="fas fa-plug"></i> Chipes</a>, <a style="color:#82319b"><i class="fas fa-plug"></i> Profundidade</a> e <a style="color:#82319b"><i class="fas fa-plug"></i> Durabilidade</a></li>
+									<li>&nbsp;&nbsp;Com as informações de mineração você pode visualizar o XP ganho e o progresso de nível, além da <a style="color:#82319b"><i class="fas fa-plug"></i> Energia</a> atual da máquina.</li>
+									<li>&nbsp;&nbsp;Minérios que estão sendo coletados nesta mineração.</li>
+								</ol>
+                            </div>
+                        </div>
+
 					</section>
 
 			    </article>
